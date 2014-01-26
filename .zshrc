@@ -29,3 +29,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 
 ##日付表示
 alias history='history -E'
+
+
+##tmux起動
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
