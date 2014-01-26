@@ -32,4 +32,4 @@ alias history='history -E'
 
 
 ##tmux起動
-[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux && exit
