@@ -32,4 +32,6 @@ alias history='history -E'
 
 
 ##tmux起動
-[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux && exit
+if [ $SHLVL = 1 ]; then
+    tmux attach || tmux && exit
+fi
