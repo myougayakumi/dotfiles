@@ -1,3 +1,5 @@
+set nocompatible
+
 " Load NeoBundle
 source ~/.vimrc.neobundle
 
@@ -6,8 +8,10 @@ source ~/.vimrc.neobundle
 set number
 set title
 set ruler
-set laststatus=2
 set ambiwidth=double
+
+" Status Line Setting
+set laststatus=2
 
 " Syntax color
 " ---------------------------
