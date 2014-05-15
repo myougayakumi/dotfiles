@@ -39,5 +39,3 @@ fi
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/versions/2.1.2/bin:$PATH"
 
-PERL_MB_OPT="--install_base \"/Users/sinbei/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/sinbei/perl5"; export PERL_MM_OPT;
