@@ -65,3 +65,4 @@ export GTK_IM_MODULE="uim"
 ##alias for objcopy/objdump (installed by brew package "crosstool-ng")
 alias objcopy="gobjcopy"
 alias objdump="gobjdump"
+=======
