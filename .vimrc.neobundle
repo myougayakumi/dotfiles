@@ -3,7 +3,7 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
  NeoBundleFetch 'Shougo/neobundle.vim'
@@ -18,11 +18,13 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'vim-ruby/vim-ruby', {
     \ 'autoload' : {
     \   'filetypes' : ['ruby']
     \ }}
+NeoBundle 'osyoyu/vim-itunes-find'
 
 
 " Original repos on github
@@ -44,6 +46,8 @@ NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 " :NeoBundleList          - list configured bundles
 " :NeoBundleInstall(!)    - install(update) bundles
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+call neobundle#end()
 
 " Installation check.
 NeoBundleCheck

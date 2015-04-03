@@ -30,14 +30,38 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 ##日付表示
 alias history='history -E'
 
+##Configure PATH
+export PYENV_ROOT="$HOME/.pyenv"
+PATH="$HOME/bin:$HOME/.rbenv/bin:$PYENV_ROOT/bin:$PATH"
 
 ##tmux起動
-if [ $SHLVL = 1 ]; then
-    tmux attach || tmux && exit
-fi
+##if [ $SHLVL = 1 ]; then
+##    tmux attach || tmux && exit
+##fi
 
+##Configure about rbenv
 eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/versions/2.1.2/bin:$PATH"
+##export PATH="$HOME/.rbenv/bin:$PATH"
 
-PERL_MB_OPT="--install_base \"/Users/sinbei/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/sinbei/perl5"; export PERL_MM_OPT;
+##Configure about pyenv
+##export PYENV_ROOT="$HOME/.pyenv"
+##export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+##Configure about perl
+export PERL_MB_OPT="--install_base \"/Users/sinbei/perl5\""
+export PERL_MM_OPT="INSTALL_BASE=/Users/sinbei/perl5"
+export PERL5LIB="/Users/sinbei/perl5/lib/perl5"
+
+##Configure about Android Studio
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
+
+
+export LANG="ja_JP.UTF-8"
+export XMODIFIERS="@im=uim"
+export GTK_IM_MODULE="uim"
+
+##alias for objcopy/objdump (installed by brew package "crosstool-ng")
+alias objcopy="gobjcopy"
+alias objdump="gobjdump"
